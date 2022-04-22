@@ -255,8 +255,7 @@ class _ConverterState extends State<Converter> {
                 height: 15,
               ),
               Container(
-                padding: EdgeInsets.symmetric(horizontal: 5),
-                width: 500,
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
                 decoration: BoxDecoration(
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
@@ -264,7 +263,7 @@ class _ConverterState extends State<Converter> {
                 child: Center(
                   child: Text((resultMessage == null) ? "" : resultMessage,
                       style:
-                          TextStyle(fontWeight: FontWeight.w700, fontSize: 30)),
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 25)),
                 ),
               )
             ]),
