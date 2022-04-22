@@ -29,7 +29,7 @@ class _ConverterState extends State<Converter> {
   late double userInput;
   String _startMeasure = "Choose a Unit";
   String _convertMeasures = "Choose a Unit";
-  String resultMessage = ' ';
+  String resultMessage = "Result";
 
   final List<String> measures = [
     'Meters',
@@ -114,6 +114,7 @@ class _ConverterState extends State<Converter> {
                 padding:
                     const EdgeInsets.symmetric(vertical: 20, horizontal: 40),
                 child: TextField(
+                  textAlign: TextAlign.center,
                   onChanged: (text) {
                     var input = double.tryParse(text);
                     if (input != null) {
@@ -260,9 +261,11 @@ class _ConverterState extends State<Converter> {
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(20),
                 ),
-                child: Text((resultMessage == null) ? "" : resultMessage,
-                    style:
-                        TextStyle(fontWeight: FontWeight.w700, fontSize: 30)),
+                child: Center(
+                  child: Text((resultMessage == null) ? "" : resultMessage,
+                      style:
+                          TextStyle(fontWeight: FontWeight.w700, fontSize: 30)),
+                ),
               )
             ]),
           ),
